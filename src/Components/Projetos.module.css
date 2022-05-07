@@ -1,0 +1,48 @@
+.projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-flow: row;
+  grid-gap: 0.5rem;
+  margin: 3rem 0.2rem 4rem 0.2rem;
+  padding: 1% 4% 0px;
+}
+
+.card{
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+  -webkit-transform: translate(0px, -3px);
+  -ms-transform: translate(0px, -3px);
+  transform: translate(0px, -3px);
+}
+
+.postText{
+  color: var(--black);
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 17px;
+}
+
+@media (max-width: 991px) {
+  .card {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+  }
+}

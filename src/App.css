@@ -1,0 +1,72 @@
+:root{
+  --white: #FFFFFF;
+  --grey: #ddd;
+  --black: #282A36;
+  --primary: tomato;
+  --secondary: #E95699;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: calc(100vh + 3rem);
+}
+
+.content{
+  flex: 1;
+}
+
+body{
+  background-color: var(--black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  color: var(--grey);
+}
+
+img{
+  max-width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+.bg-img{
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.08;
+  object-fit: cover;
+}
+
+.animeLeft{
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: animeLeft 0.7s forwards;
+}
+
+@keyframes animeLeft{
+  to{
+    transform: initial;
+    opacity: initial;
+  }
+}
+
+.animeTop{
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: animeTop 0.7s forwards;
+}
+
+@keyframes animeTop{
+  to{
+    transform: initial;
+    opacity: initial;
+  }
+}

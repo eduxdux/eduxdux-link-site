@@ -1,0 +1,57 @@
+.about{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.5rem;
+  padding: 5rem 18rem 1rem 18rem;
+}
+
+@media (max-width: 85rem) {
+  .about{
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    padding: 5rem 12rem 1rem 12rem;
+  }
+  }
+  
+  @media (max-width: 55rem) {
+    .about{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0.7rem;
+    padding: 2rem 0rem 0rem 0rem;
+  } 
+  }
+
+.escritas{
+  padding: 0.5rem;
+}
+
+.escritas h1{
+  font-size: 2rem;
+  margin-top: -1rem;
+  color: var(--white);
+}
+
+.escritas h4{
+  font-size: 1rem;
+}
+
+.escritas mark{
+  background-color: var(--black);
+  color: var(--secondary);
+}
+
+.escritas p{
+  font-size: 1.1rem;
+  
+}	
+
+.escritas h5{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.about img{
+  border-radius: 15px;
+  width: auto;
+  height: auto;
+  min-width: 300px;
+}
