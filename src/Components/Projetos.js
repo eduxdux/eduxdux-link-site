@@ -23,26 +23,38 @@ function Projetos() {
       {error && <h1>Error on graphql</h1>}
       {projects.length > 0 &&
         projects.map((token) => (
-          <div
-            className={styles.card}
-            onClick={() =>
-              window.open(
-                `https://www.fxhash.xyz/generative/${token.id}`,
-                '_blank',
-              )
-            }
-          >
-            <img
-              src={token.displayUri.replace(
-                'ipfs://',
-                'https://gateway.fxhash2.xyz/ipfs/',
-              )}
-              alt={token.id}
-            />
-            <div key={token.id} className={styles.postText}>
-              {token.name}
+          <>
+            <div className={styles.card}>
+              <img
+                src={token.displayUri.replace(
+                  'ipfs://',
+                  'https://gateway.fxhash2.xyz/ipfs/',
+                )}
+                alt={token.id}
+                onClick={() =>
+                  window.open(
+                    `https://www.fxhash.xyz/generative/${token.id}`,
+                    '_blank',
+                  )
+                }
+              />
+
+              <div key={token.id} className={styles.postText}>
+                {token.name}
+                <div
+                  className={styles.floor}
+                  onClick={() =>
+                    window.open(
+                      `https://fxcollectors.stroep.nl/?project=${token.id}#page=marketplace`,
+                      '_blank',
+                    )
+                  }
+                >
+                  Buy the floor
+                </div>
+              </div>
             </div>
-          </div>
+          </>
         ))}
     </div>
   );

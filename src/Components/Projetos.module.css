@@ -38,6 +38,21 @@
   font-size: 17px;
 }
 
+.floor{
+  margin-top: 0.7rem;
+  color: var(--white);
+  font-size: 12px;
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  background-color: var(--secondary);
+}
+
+.floor:hover{
+  background-color: var(--primary);
+  color: var(--white);
+  scale: 1.03;
+}
+
 @media (max-width: 991px) {
   .card {
     -webkit-box-flex: 0;
